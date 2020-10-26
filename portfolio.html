@@ -49,31 +49,14 @@
 
             <nav class="main-nav float-right d-none d-lg-block">
                 <ul>
-                    <li><a href="#intro">Home</a></li>
-                    <li><a href="#about">About Us</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#portfolio">Portfolio</a></li>
-                    <li><a href="#team">Team</a></li>
-                    <li class="drop-down">
-                        <a href="">Drop Down</a>
+                    <li><a href="index.html#about">About Us</a></li>
+                    <li class="drop-down"><a href="portfolio.html">Portfolio</a>
                         <ul>
-                            <li><a href="#">Drop Down 1</a></li>
-                            <li class="drop-down">
-                                <a href="#">Drop Down 2</a>
-                                <ul>
-                                    <li><a href="#">Deep Drop Down 1</a></li>
-                                    <li><a href="#">Deep Drop Down 2</a></li>
-                                    <li><a href="#">Deep Drop Down 3</a></li>
-                                    <li><a href="#">Deep Drop Down 4</a></li>
-                                    <li><a href="#">Deep Drop Down 5</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="#">Drop Down 3</a></li>
-                            <li><a href="#">Drop Down 4</a></li>
-                            <li><a href="#">Drop Down 5</a></li>
+                            <li><a href="gallery.html">Gallery</a></li>
                         </ul>
                     </li>
-                    <li><a href="#contact">Contact Us</a></li>
+                    <li><a href="news.html">News</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
                 </ul>
             </nav>
         </div>
@@ -81,6 +64,11 @@
     <!-- .main-nav -->
     <!-- end of navbar -->
     <!-- end of navigation -->
+
+    <ul class="breadcrumb">
+        <li><a href="index.html">Home</a></li>
+        <li>Portfolio</li>
+    </ul>
 
     <!-- Header -->
     <header id="header" class="p-header">
@@ -99,31 +87,34 @@
     </header>
     <!-- end of header -->
 
-    <section id="portfolio" class="clearfix">
+    <section id="portfolio" class="clearfix" style="display: block;">
         <div class="container">
 
             <header class="section-header">
                 <h3 class="section-title">Our Portfolio</h3>
             </header>
 
+            <hr>
+
             <div class="row">
                 <div class="col-lg-12">
                     <ul id="portfolio-flters">
                         <li data-filter="*" class="filter-active">All</li>
-                        <li data-filter=".filter-app">App</li>
-                        <li data-filter=".filter-card">Card</li>
-                        <li data-filter=".filter-web">Web</li>
+                        <li data-filter=".filter-com">Commercial</li>
+                        <li data-filter=".filter-res">Residential</li>
+                        <li data-filter=".filter-off">Office</li>
+                        <li data-filter=".filter-ed">Education</li>
                     </ul>
                 </div>
             </div>
 
             <div class="row portfolio-container">
 
-                <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+                <div class="col-lg-6 col-md-6 portfolio-item filter-com">
                     <div class="portfolio-wrap">
-                        <img src="images/acton8.jpg" class="img-fluid" alt="">
+                        <a href="acton.html"><img src="images/acton8.jpg" class="img-fluid" id="myImg" alt=""></a>
                         <div class="portfolio-info">
-                            <h4><a href="#">App 1</a></h4>
+                            <h4><a href="acton.html">App 1</a></h4>
                             <p>App</p>
                             <div>
                                 <a href="img/portfolio/app1.jpg" data-lightbox="portfolio" data-title="App 1" class="link-preview" title="Preview"><i class="ion ion-eye"></i></a>
@@ -133,7 +124,8 @@
                     </div>
                 </div>
 
-                <div class="col-lg-4 col-md-6 portfolio-item filter-web" data-wow-delay="0.1s">
+
+                <div class="col-lg-6 col-md-6 portfolio-item filter-com" data-wow-delay="0.1s">
                     <div class="portfolio-wrap">
                         <img src="images/acton8.jpg" class="img-fluid" alt="">
                         <div class="portfolio-info">
@@ -147,7 +139,7 @@
                     </div>
                 </div>
 
-                <div class="col-lg-4 col-md-6 portfolio-item filter-app" data-wow-delay="0.2s">
+                <div class="col-lg-6 col-md-6 portfolio-item filter-com" data-wow-delay="0.2s">
                     <div class="portfolio-wrap">
                         <img src="images/acton8.jpg" class="img-fluid" alt="">
                         <div class="portfolio-info">
@@ -161,7 +153,7 @@
                     </div>
                 </div>
 
-                <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+                <div class="col-lg-6 col-md-6 portfolio-item filter-res">
                     <div class="portfolio-wrap">
                         <img src="images/acton8.jpg" class="img-fluid" alt="">
                         <div class="portfolio-info">
@@ -175,7 +167,7 @@
                     </div>
                 </div>
 
-                <div class="col-lg-4 col-md-6 portfolio-item filter-web" data-wow-delay="0.1s">
+                <div class="col-lg-6 col-md-6 portfolio-item filter-res" data-wow-delay="0.1s">
                     <div class="portfolio-wrap">
                         <img src="images/acton8.jpg" class="img-fluid" alt="">
                         <div class="portfolio-info">
@@ -189,7 +181,7 @@
                     </div>
                 </div>
 
-                <div class="col-lg-4 col-md-6 portfolio-item filter-app" data-wow-delay="0.2s">
+                <div class="col-lg-6 col-md-6 portfolio-item filter-res" data-wow-delay="0.2s">
                     <div class="portfolio-wrap">
                         <img src="images/acton8.jpg" class="img-fluid" alt="">
                         <div class="portfolio-info">
@@ -203,7 +195,7 @@
                     </div>
                 </div>
 
-                <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+                <div class="col-lg-6 col-md-6 portfolio-item filter-off">
                     <div class="portfolio-wrap">
                         <img src="images/acton8.jpg" class="img-fluid" alt="">
                         <div class="portfolio-info">
@@ -217,7 +209,7 @@
                     </div>
                 </div>
 
-                <div class="col-lg-4 col-md-6 portfolio-item filter-card" data-wow-delay="0.1s">
+                <div class="col-lg-6 col-md-6 portfolio-item filter-off" data-wow-delay="0.1s">
                     <div class="portfolio-wrap">
                         <img src="images/acton8.jpg" class="img-fluid" alt="">
                         <div class="portfolio-info">
@@ -231,7 +223,7 @@
                     </div>
                 </div>
 
-                <div class="col-lg-4 col-md-6 portfolio-item filter-web" data-wow-delay="0.2s">
+                <div class="col-lg-6 col-md-6 portfolio-item filter-ed" data-wow-delay="0.2s">
                     <div class="portfolio-wrap">
                         <img src="images/acton8.jpg" class="img-fluid" alt="">
                         <div class="portfolio-info">
@@ -249,14 +241,9 @@
         </div>
     </section>
 
-    <section id="slider" class="slider" style="background: #eef5fa;">
-        <h2 class="text-center">Recent Projects</h2>
-        <div class="slick">
-            <div class=""><img src="images/acton8.jpg" alt="" />hello</div>
-            <div class=""><img src="images/leicester7.jpg" alt="" />hello</div>
-            <div class=""><img src="images/acton8.jpg" alt="" />hello</div>
-        </div>
-    </section>
+    <div class="d-flex justify-content-center mb-5">
+        <button type="button" class="btn btn-lg" style="width: 50%;">VIEW GALLERY</button>
+    </div>
 
     <!-- Footer -->
 
@@ -266,27 +253,27 @@
                 <div class="row">
 
                     <div class="col-lg-4 col-md-6 footer-info">
-                        <h3>NewBiz</h3>
+                        <h3>Bowden Moss</h3>
                         <p>Cras fermentum odio eu feugiat lide par naso tierra. Justo eget nada terra videa magna derita valies darta donna mare fermentum iaculis eu non diam phasellus. Scelerisque felis imperdiet proin fermentum leo. Amet volutpat consequat
                             mauris nunc congue.</p>
                     </div>
 
-                    <div class="col-lg-2 col-md-6 footer-links">
+                    <div class="col-lg-4 col-md-6 footer-links">
                         <h4>Useful Links</h4>
                         <ul>
                             <li><a href="#">Home</a></li>
                             <li><a href="#">About us</a></li>
-                            <li><a href="#">Services</a></li>
-                            <li><a href="#">Terms of service</a></li>
-                            <li><a href="#">Privacy policy</a></li>
+                            <li><a href="#">Portfolio</a></li>
+                            <li><a href="#">News</a></li>
+                            <li><a href="#">Contact</a></li>
                         </ul>
                     </div>
 
-                    <div class="col-lg-3 col-md-6 footer-contact">
+                    <div class="col-lg-4 col-md-6 footer-contact">
                         <h4>Contact Us</h4>
                         <p>
-                            A108 Adam Street <br> New York, NY 535022<br> United States <br>
-                            <strong>Phone:</strong> +1 5589 55488 55<br>
+                            Aston Bury Farm, Aston Bury Lane, Stevenage, SG2 7EG, UK<br>
+                            <strong>Phone:</strong> 01438 579710<br>
                             <strong>Email:</strong> info@example.com<br>
                         </p>
 
@@ -298,14 +285,6 @@
                             <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
                         </div>
 
-                    </div>
-
-                    <div class="col-lg-3 col-md-6 footer-newsletter">
-                        <h4>Our Newsletter</h4>
-                        <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna veniam enim veniam illum dolore legam minim quorum culpa amet magna export quem marada parida nodela caramase seza.</p>
-                        <form action="" method="post">
-                            <input type="email" name="email"><input type="submit" value="Subscribe">
-                        </form>
                     </div>
 
                 </div>
@@ -323,13 +302,12 @@
 
         <script type="text/javascript" src="js/mobile-nav.js"></script>
 
-        <script type="text/javascript" src="js/slick.min.js"></script>
-
         <script type="text/javascript" src="wow/wow.min.js"></script>
 
         <script type="text/javascript" src="isotope/isotope.pkgd.min.js"></script>
 
         <script src="js/scripts.js"></script>
+
 </body>
 
 </html>

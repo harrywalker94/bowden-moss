@@ -1,17 +1,3 @@
-$(document).ready(() => {
-  $("#slider .slick").slick({
-    autoplay: true,
-    dots: true,
-    infinite: true,
-    speed: 1500,
-    fade: true,
-    cssEase: "linear",
-    arrows: true,
-  });
-});
-
-new WOW().init();
-
 // Porfolio isotope and filter
 $(window).on("load", function () {
   var portfolioIsotope = $(".portfolio-container").isotope({

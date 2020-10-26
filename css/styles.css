@@ -2,6 +2,10 @@
 
 /*******************************************************************************************************/
 
+*:focus {
+    outline: 0 !important;
+}
+
 body,
 html {
     width: 100%;
@@ -12,10 +16,32 @@ html {
     scroll-behavior: smooth;
 }
 
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+:target:before {
+    content: "";
+    display: block;
+    height: 100px;
+    margin: -30px 0 0;
+}
+
 .title {
     font-size: 3rem;
     text-transform: uppercase;
     letter-spacing: 4px;
+    margin-bottom: 5rem;
+}
+
+.title span {
+    border-left: solid 10px #59a2cf;
+    padding-left: 30px;
 }
 
 .underline {
@@ -26,6 +52,107 @@ html {
     margin: 0 auto;
     margin-bottom: 1.5rem;
     margin-top: 1.5rem;
+}
+
+hr {
+    border: 2px double #59a2cf;
+}
+
+.btn {
+    background: #59a2cf;
+    color: #fff;
+    transition: all .3 ease-in-out;
+    opacity: 1;
+}
+
+.btn:hover {
+    background: #59a2cf;
+    color: #fff;
+    opacity: .8;
+}
+
+.btn a:hover {
+    color: #fff;
+}
+
+li {
+    list-style: none;
+}
+
+ul.breadcrumb {
+    list-style: none;
+    background-color: #59a2cf;
+    margin-top: 5rem;
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+    border-radius: 0;
+    margin-bottom: 10rem;
+    display: block;
+}
+
+ul.breadcrumb li {
+    display: inline;
+    font-size: 18px;
+    font-style: italic;
+}
+
+ul.breadcrumb li+li:before {
+    padding: 8px;
+    color: black;
+    content: "/\00a0";
+}
+
+ul.breadcrumb li a {
+    color: #fff;
+    text-decoration: none;
+    font-style: normal;
+}
+
+ul.breadcrumb li a:hover {
+    color: #01447e;
+    text-decoration: underline;
+}
+
+ul.breadcrumb-ab {
+    list-style: none;
+    background-color: #59a2cf;
+    margin-top: 5rem;
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+    border-radius: 0;
+    margin-bottom: 10rem;
+    display: block;
+}
+
+ul.breadcrumb-ab li {
+    display: inline;
+    font-size: 18px;
+    font-style: italic;
+}
+
+ul.breadcrumb-ab li+li:before {
+    padding: 8px;
+    color: black;
+    content: "/\00a0";
+}
+
+ul.breadcrumb-ab li a {
+    color: #fff;
+    text-decoration: none;
+    font-style: normal;
+}
+
+ul.breadcrumb-ab li a:hover {
+    color: #01447e;
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    ul.breadcrumb-ab {
+        margin-top: 0rem;
+    }
 }
 
 
@@ -43,6 +170,9 @@ html {
     background-color: #fff;
     height: 5rem;
     padding: 1rem;
+    -webkit-box-shadow: 0px 3px 17px 0px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0px 3px 17px 0px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 3px 17px 0px rgba(0, 0, 0, 0.2);
 }
 
 .main-nav {
@@ -119,8 +249,10 @@ html {
 }
 
 .main-nav .drop-down>a:after {
-    content: "\f107";
-    font-family: FontAwesome;
+    content: "\f078";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    vertical-align: middle;
     padding-left: 10px;
 }
 
@@ -140,7 +272,8 @@ html {
 }
 
 .main-nav .drop-down .drop-down>a:after {
-    content: "\f105";
+    content: "\f078";
+    font-family: "Font Awesome 5 Free";
     position: absolute;
     right: 15px;
 }
@@ -157,7 +290,7 @@ html {
     left: -260px;
     width: 260px;
     padding-top: 18px;
-    background: rgba(19, 39, 57, 0.8);
+    background: rgba(89, 162, 207, 0.8);
     transition: 0.4s;
 }
 
@@ -178,13 +311,15 @@ html {
 .mobile-nav a:hover,
 .mobile-nav .active>a,
 .mobile-nav li:hover>a {
-    color: #74b5fc;
+    color: black;
     text-decoration: none;
 }
 
 .mobile-nav .drop-down>a:after {
     content: "\f078";
-    font-family: FontAwesome;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    vertical-align: middle;
     padding-left: 10px;
     position: absolute;
     right: 15px;
@@ -192,6 +327,9 @@ html {
 
 .mobile-nav .active.drop-down>a:after {
     content: "\f077";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    vertical-align: middle;
 }
 
 .mobile-nav .drop-down>a {
@@ -264,6 +402,12 @@ html {
     background-color: #fff;
 }
 
+@media (max-width: 768px) {
+    #header {
+        display: none;
+    }
+}
+
 .header .header-content {
     padding-top: 8rem;
     padding-bottom: 4rem;
@@ -294,10 +438,12 @@ html {
     -moz-animation: bounce 1.8s infinite;
     -webkit-animation: bounce 1.8s infinite;
     animation: bounce 1.8s infinite;
+    outline: none;
+    transition: all .3s ease-in-out;
 }
 
-.header .home-logo-div .btn-header:hover {
-    outline: 0 !important;
+.header .home-logo-div .btn-header:focus {
+    outline: 0;
 }
 
 @keyframes bounce {
@@ -321,118 +467,58 @@ html {
 
 /*******************************************************************************************************/
 
-.about-text {
-    margin-bottom: 2rem;
-    padding: 0 10rem;
-}
-
-.cards-1 {
-    padding-top: 4rem;
-    padding-bottom: 1.625rem;
-    text-align: center;
-}
-
-.cards-1 h2 {
-    margin-bottom: 1rem;
-}
-
-.cards-1 .card {
-    max-width: 21rem;
-    max-height: 100%;
-    height: 28rem;
-    margin-right: auto;
-    margin-bottom: 4.5rem;
-    margin-left: auto;
-    padding: 3.25rem 2rem 2rem 2rem;
-    border: px solid #59a2cf;
-    border-radius: 0.5rem;
-    background: transparent;
-}
-
-.cards-1 .card-image {
-    width: 12rem;
-    height: 10rem;
-    margin-right: auto;
-    margin-bottom: 2rem;
-    margin-left: auto;
-    -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.3);
-    -moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.3);
-    box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.3);
-}
-
-.cards-1 .card-title {
-    margin-bottom: 0.875rem;
-}
-
-.cards-1 .card-body {
-    padding: 0;
-}
-
-
-/****************************************    04. Services     **************************************** /
-
-/*******************************************************************************************************/
-
-#services {
-    padding: 60px 0 40px 0;
-    box-shadow: inset 0px 0px 12px 0px rgba(0, 0, 0, 0.1);
-    background: #eef5fa;
-}
-
-#services .box {
-    height: 10rem;
-    padding: 30px;
-    position: relative;
-    overflow: hidden;
-    border-radius: 10px;
-    margin: 0 10px 40px 10px;
+#about-home {
     background: #fff;
-    box-shadow: 0 10px 29px 0 rgba(68, 88, 144, 0.4);
-    transition: all 0.4s ease-in-out;
+    margin-bottom: 4rem;
 }
 
-#services .box:hover {
-    -webkit-transform: translateY(-5px);
-    transform: translateY(-5px);
-    background: #59a2cf;
-    cursor: pointer;
+.about-text-home {
+    text-align: left;
 }
 
-#services .icon {
+#about h1 {
+    font-size: 1rem;
+}
+
+.about-img {
+    position: relative;
+    width: 100%;
+    height: 250px;
+}
+
+@media (max-width: 768px) {
+    .about-img {
+        margin: 10px;
+        height: 180px;
+    }
+}
+
+.about-img img {
+    width: 100%;
+    height: 100%;
+    -webkit-box-shadow: 0px 6px 17px 0px rgba(0, 0, 0, 0.4);
+    -moz-box-shadow: 0px 6px 17px 0px rgba(0, 0, 0, 0.4);
+    box-shadow: 0px 6px 17px 0px rgba(0, 0, 0, 0.4);
+    border-radius: 3px;
+    border-bottom: 8px solid #59a2cf;
+}
+
+.about-img:hover img {
+    opacity: 0.4;
+    transition: all .3s ease-in-out;
+}
+
+.centered {
     position: absolute;
-    left: -10px;
-    top: calc(50% - 32px);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: all .3s ease-in-out;
 }
 
-#services .icon i {
-    font-size: 64px;
-    line-height: 1;
-    transition: 0.5s;
-}
-
-#services .box h4 a {
-    color: #59a2cf;
-    text-decoration: none;
-}
-
-#services .box h4 a:hover {
-    color: #59a2cf;
-    text-decoration: none;
-}
-
-#services .description {
-    font-size: 14px;
-    margin-left: 40px;
-    line-height: 24px;
-    margin-bottom: 0;
-}
-
-#services .box:hover h4 a {
-    color: #fff;
-}
-
-#services .box:hover .description {
-    opacity: 1 !important;
+.about-img:hover .centered {
+    opacity: 1;
 }
 
 
@@ -440,44 +526,18 @@ html {
 
 /*******************************************************************************************************/
 
-#slider {
-    padding: 2rem;
-}
-
-#slider div {
+.details {
+    position: relative;
     width: 100%;
-    height: 15rem;
+    height: 250px;
+    margin: 0 auto;
 }
 
-#slider div img {
+.details img {
     width: 100%;
     height: 100%;
-}
-
-.slick-dots {
-    display: flex;
-    justify-content: center;
-    margin: 0;
-    padding: 1rem 0;
-    list-style-type: none;
-}
-
-.slick-dots li {
-    margin: 0 0.25rem;
-    background: #cacaca;
-}
-
-.slick-dots button {
-    display: block;
-    width: 1.2rem;
-    height: 1.2rem;
-    padding: ;
-    border: none;
-    text-indent: -9999px;
-}
-
-.slick-dots li.slick-active button {
-    background-color: #59a2cf;
+    border-radius: 3px;
+    border-bottom: 8px solid #59a2cf;
 }
 
 
@@ -490,6 +550,8 @@ html {
     padding: 0 0 30px 0;
     color: #eee;
     font-size: 14px;
+    width: 100%;
+    text-align: center;
 }
 
 #footer .footer-top {
@@ -629,7 +691,93 @@ html {
 }
 
 
-/****************************************    Portfolio.html     **************************************** /
+/****************************************    07. About  **************************************** /
+
+/*******************************************************************************************************/
+
+.about-text {
+    margin-bottom: 2rem;
+    text-align: left;
+}
+
+.cards-1 {
+    padding-top: 4rem;
+    padding-bottom: 1.625rem;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .cards-1 {
+        padding-top: 10rem;
+    }
+}
+
+.cards-1 h2 {
+    margin-bottom: 1rem;
+}
+
+.cards-1 .card {
+    max-width: 21rem;
+    max-height: 100%;
+    height: 28rem;
+    margin-right: auto;
+    margin-bottom: 2.5rem;
+    margin-left: auto;
+    padding: 3.25rem 2rem 2rem 2rem;
+    border: px solid #59a2cf;
+    border-radius: 0.5rem;
+    background: transparent;
+}
+
+.cards-1 .card-image {
+    width: 12rem;
+    height: 10rem;
+    margin-right: auto;
+    margin-bottom: 2rem;
+    margin-left: auto;
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.3);
+    box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.3);
+}
+
+.cards-1 .card-title {
+    margin-bottom: 0.875rem;
+}
+
+.cards-1 .card-title span {
+    border-left: solid 6px #59a2cf;
+    padding-left: 30px;
+}
+
+.cards-1 .card-body {
+    padding: 0;
+}
+
+#about ul li {
+    list-style: none;
+}
+
+#about ul li::before {
+    content: "\2022";
+    /* Add content: \2022 is the CSS Code/unicode for a bullet */
+    color: #59a2cf;
+    /* Change the color */
+    font-weight: bold;
+    /* If you want it to be bold */
+    display: inline-block;
+    /* Needed to add space between the bullet and the text */
+    width: 1em;
+    /* Also needed for space (tweak if needed) */
+    margin-left: -1em;
+    /* Also needed for space (tweak if needed) */
+}
+
+#about ul li:nth-child(1)::before {
+    content: "";
+}
+
+
+/****************************************    08. Portfolio.html     **************************************** /
 
 /*******************************************************************************************************/
 
@@ -645,6 +793,12 @@ html {
 
 .p-header .text-container {
     margin-bottom: 4rem;
+}
+
+.p-header .home-logo-div {
+    font-size: 6rem;
+    text-shadow: -3px 2px 2px rgba(150, 150, 150, 1);
+    color: #59a2cf;
 }
 
 .p-header .home-logo-div .home-logo-img {
@@ -667,7 +821,6 @@ html {
 
 #portfolio {
     padding: 60px 0;
-    box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.1);
 }
 
 #portfolio #portfolio-flters {
@@ -684,8 +837,8 @@ html {
     padding: 6px 20px;
     font-size: 12px;
     line-height: 20px;
-    color: #007bff;
-    border-radius: 50px;
+    color: #59a2cf;
+    border-radius: 2px;
     text-transform: uppercase;
     background: #ecf5ff;
     margin-bottom: 5px;
@@ -694,7 +847,7 @@ html {
 
 #portfolio #portfolio-flters li:hover,
 #portfolio #portfolio-flters li.filter-active {
-    background: #007bff;
+    background: #59a2cf;
     color: #fff;
 }
 
@@ -718,6 +871,8 @@ html {
 #portfolio .portfolio-item .portfolio-wrap:hover img {
     opacity: 0.4;
     transition: 0.3s;
+    width: 200%;
+    height: 200%;
 }
 
 #portfolio .portfolio-item .portfolio-wrap .portfolio-info {
@@ -811,7 +966,44 @@ html {
 }
 
 
-/****************************************    Media Queries     **************************************** /
+/****************************************    09. Contact.html     **************************************** /
+
+/*******************************************************************************************************/
+
+.contact-content {
+    padding: 4rem;
+}
+
+.contact-content h1 {
+    font-size: 1.2rem;
+}
+
+.contact-content ul li::before {
+    content: "\2022";
+    /* Add content: \2022 is the CSS Code/unicode for a bullet */
+    color: #59a2cf;
+    /* Change the color */
+    font-weight: bold;
+    /* If you want it to be bold */
+    display: inline-block;
+    /* Needed to add space between the bullet and the text */
+    width: 1em;
+    /* Also needed for space (tweak if needed) */
+    margin-left: -1em;
+    /* Also needed for space (tweak if needed) */
+}
+
+
+/****************************************    09. Projects     **************************************** /
+
+/*******************************************************************************************************/
+
+.project-content {
+    padding: 10rem 2rem 3rem 2rem;
+}
+
+
+/****************************************    10. Media Queries     **************************************** /
 
 /*******************************************************************************************************/
 
@@ -903,7 +1095,7 @@ html {
     .header {
         background: url("../images/acton8.jpg") center center no-repeat;
         background-size: cover;
-        height: 85vh;
+        height: 100vh;
     }
     .header .header-content {
         padding-top: 11.5rem;
@@ -998,6 +1190,3 @@ html {
     }
     /* End Portfolio */
 }
-
-
-/* end of min-width width 1200px */
